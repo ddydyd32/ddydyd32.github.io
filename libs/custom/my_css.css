@@ -10,6 +10,8 @@ h4 {
   margin-bottom: 0px; }
 .main-description p {
   margin-bottom: 0px; }
+.main-description .header-text {
+  white-space: pre-line; }
 .main-description .fa {
   font-size: 22px;
   margin-top: 5px; }
@@ -37,6 +39,19 @@ h4 {
   border-top: 1px solid #eee;
   padding: 4rem 0;
   margin-bottom: 0;}
+.news-list,
+.awards-list {
+  list-style: none;
+  margin-left: 0; }
+.news-list li,
+.awards-list li {
+  margin-bottom: 1rem; }
+.news-date,
+.award-date {
+  display: inline-block;
+  min-width: 3.2rem;
+  margin-right: 0.8rem;
+  font-weight: 600; }
 .footer {
   text-align: center;
   color: rgba(0, 0, 0, 0.4);
@@ -82,6 +97,8 @@ h4 {
   /* Navbar */
   .navbar + .docs-section {
     border-top-width: 0; }
+  .docs-section {
+    scroll-margin-top: 7rem; }
   .navbar,
   .navbar-spacer {
     display: block;
@@ -191,3 +208,91 @@ h4 {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
+
+/* Left-to-right research taxonomy */
+.taxonomy-wrap {
+  overflow-x: auto;
+  margin-top: 2.4rem; }
+.taxonomy {
+  display: flex;
+  align-items: center;
+  min-width: 68rem; }
+.taxonomy ul.tax-children {
+  list-style: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 0 1.8rem;
+  padding: 0;
+  font-size: 1.4rem; }
+.taxonomy li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 1.8rem;
+  list-style: none !important; }
+.taxonomy li::marker {
+  content: none; }
+.taxonomy li::before,
+.taxonomy li::after {
+  content: "";
+  position: absolute;
+  left: 0; }
+.taxonomy li::before {
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid #bdbdbd; }
+.taxonomy li::after {
+  top: 50%;
+  width: 1.8rem;
+  border-top: 1px solid #bdbdbd; }
+.taxonomy li:first-child::before {
+  top: 50%; }
+.taxonomy li:last-child::before {
+  bottom: 50%; }
+.tax-node {
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background: #f7f7f7;
+  padding: 0.7rem 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+  font-weight: 600; }
+.tax-node::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  width: 1.8rem;
+  border-top: 1px solid #bdbdbd; }
+.tax-root {
+  width: 14rem;
+  color: #fff;
+  background: #182B49;
+  border-color: #182B49; }
+.taxonomy .tax-node:not(.tax-leaf):not(.tax-root) {
+  width: 14rem;
+  color: #006A96;
+  background: #fff;
+  border-color: #006A96;
+  white-space: nowrap; }
+.tax-leaf {
+  width: 42rem;
+  text-align: left;
+  font-weight: 400;
+  border: 1px solid #C69214;
+  background: #fff; }
+.tax-leaf::after {
+  display: none; }
+.tax-label {
+  display: block;
+  font-weight: 600; }
+.tax-detail {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(34, 34, 34, 0.68);
+  font-weight: 400; }

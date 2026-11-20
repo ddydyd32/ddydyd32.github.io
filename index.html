@@ -14,12 +14,116 @@ title: Home
 <!-- ========== Research Interests ========== -->
 <div class="docs-section" id="research-interests">  
   <h4>Research Interests</h4>
-  I am interested in multi-modal generative models and human-centered AI. I focus on efficient data-centric approaches for improving and accelerating spatial reasoning ability of multi-modal foundation models. I also study societal value alignment for large language models, including values such as diversity, equity, and inclusion, controlled through precise human interactions. <br>
-  <br>
-  <b>Multi-Modality: vision large language models, spatial reasoning, visual token efficiency<br>
-  <b>Human Centred Studies: societal AI, social value alignment<br>
-  <b>Applications:</b> audio, music, sports simulation, computer vision, natural language processing <br>
+  I work on data-centric research from the perspectives of self-improvement, scaling, utilization, societal alignment, and efficiency.
 
+  <div class="taxonomy-wrap">
+    <div class="taxonomy">
+      <div class="tax-node tax-root">Data, Data, Data</div>
+      <ul class="tax-children">
+        <li>
+          <div class="tax-node">Self-improvement</div>
+          <ul class="tax-children">
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">Self-improving agents</span>
+                <span class="tax-detail">[WIP] what abilities are needed in inference and how to curate through data?</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tax-node">Scaling</div>
+          <ul class="tax-children">
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">Agentic training</span>
+                <span class="tax-detail">[WIP] Scaling for agentic mid-training data in addition to number of tasks and environments.</span>
+              </div>
+            </li>
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">LLM evaluation</span>
+                <span class="tax-detail">Calling for and releasing large-scale standardized item-level LLM response data for better evaluation.[<a href="https://arxiv.org/pdf/2604.03244" target="_blank">arxiv</a>]</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tax-node">Utilization</div>
+          <ul class="tax-children">
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">Latent visual reasoning</span>
+                <span class="tax-detail">Designing correct reward signals to better make use of visual reasoning latent tokens in visual LLM post-training.[<a href="https://arxiv.org/pdf/2605.18641" target="_blank">arxiv</a>]</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tax-node">Societal alignment</div>
+          <ul class="tax-children">
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">Pluralistic values</span>
+                <span class="tax-detail">Building a data curation pipeline to comprehensively cover pluralistic values in LLM post-training.[<a href="https://arxiv.org/pdf/2507.16679" target="_blank">arxiv</a>]</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="tax-node">Efficiency</div>
+          <ul class="tax-children">
+            <li>
+              <div class="tax-node tax-leaf">
+                <span class="tax-label">Remote sensing</span>
+                <span class="tax-detail">Benchmarking and improving data pruning methods for remote sensing forestry change detection.[<a href="https://arxiv.org/pdf/2608.21754" target="_blank">arxiv</a>]</span>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ========== AWARDS ========== -->
+<div class="docs-section" id="awards">
+  <h4>Awards</h4>
+  <ul class="awards-list">
+    {% for item in site.data.awards.awards %}
+      <li>
+        {% if item.date %}
+          <span class="award-date">{{ item.date }}</span>
+        {% endif %}
+        {% capture award_html %}{{ item.text | markdownify }}{% endcapture %}
+        {% assign award_html = award_html | remove: '<p>' | remove: '</p>' | replace: '<a href=', '<a target="_blank" href=' | strip %}
+        {% if item.url %}
+          <a href="{{ item.url }}" target="_blank">{{ award_html }}</a>
+        {% else %}
+          {{ award_html }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<!-- ========== NEWS ========== -->
+<div class="docs-section" id="news">
+  <h4>News</h4>
+  <ul class="news-list">
+    {% for item in site.data.news.news %}
+      <li>
+        <span class="news-date">{{ item.date }}</span>
+        {% capture news_html %}{{ item.text | markdownify }}{% endcapture %}
+        {% assign news_html = news_html | remove: '<p>' | remove: '</p>' | replace: '<a href=', '<a target="_blank" href=' | strip %}
+        {% if item.url %}
+          <a href="{{ item.url }}" target="_blank">{{ news_html }}</a>
+        {% else %}
+          {{ news_html }}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
 <!-- ========== Prospective ==========
@@ -31,13 +135,10 @@ title: Home
 </div>
 -->
 
-<!-- ========== PUBLICATIONS ========== -->
+<!-- ========== PUBLICATIONS ==========
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
 
-  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
-  <sup>‡</sup> indicates equal contribution.
-</p> -->
   <p>
     <sup>‡</sup> indicates equal contribution.
   </p>
@@ -122,8 +223,8 @@ title: Home
     </div>
   </div>
 </div>
-
-<!-- <!-- ========== PROJECTS ==========  -->
+-->
+<!-- ========== PROJECTS ==========
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
 
@@ -196,18 +297,17 @@ title: Home
   </div>
 
 </div>
-<!-- -->
+-->
 
-<!-- ========== RESUME ========== -->
+<!-- ========== RESUME ========== 
 <div class="docs-section" id="resume">
   <h4>Vitæ</h4>
 
   <p> Available upon request. </p>
 
-  <!-- <p>Full Resume in <a href={{ "/assets/cv/resume_sde_us.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>. Full CV in <a href={{ "/assets/cv/cv.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p> -->
+   <p>Full Resume in <a href={{ "/assets/cv/resume_sde_us.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>. Full CV in <a href={{ "/assets/cv/cv.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p>  
 
-  <!-- The Timeline -->
-  <ul class="timeline">
+   <ul class="timeline">
     {% for exp in site.data.experience.experiences %}
     <li>
       {% if exp.category == "work" %}
@@ -225,11 +325,12 @@ title: Home
     {% endfor %}
   </ul>
 </div>
+-->
 
 <div class="docs-section" id="services">  
   <h4>Services</h4>
   Reviewer
-  <li> CVPR 2026, ICLR 2026, NeurIPS 2025, AAAI (2024, 2025), International Workshop on Resource-Efficient Learning for Knowledge Discovery (2023) </li> 
+  <li> ICLR 2027, NeurIPS 2026, CVPR 2026, ICLR 2026, NeurIPS 2025, AAAI 2025, AAAI 2024, International Workshop on Resource-Efficient Learning for Knowledge Discovery 2023 </li> 
 </div>
 
 <div class="docs-section" id="teaching">  

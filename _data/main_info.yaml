@@ -1,8 +1,12 @@
 name: "Dongyao Zhu"
-title: "Researcher, Engineer<br>Open to research collaborations!"
-email: "dongyaoz32 [AT] outlook [dot] com"
+title: |
+  Ph.D. Student in Computer Science at North Carolina State University (advisor: Dr. Ranga Raju Vatsavai)
+  Ex- Research Assistant at Microsoft Research Asia
+  Ex- Machine Learning Engineer at 2012 Labs, Huawei Technologies Co., Ltd.
+  B.S. in Computer Science and B.A. in Economics at University of California, San Diego
+email: "I use outlook with dongyaoz32"
 profile_pic: "assets/thumbnails/face_pic.jpg"
-# linkedin: "https://www.linkedin.com/in/dongyaozhu"
+linkedin: "https://www.linkedin.com/in/dongyaozhu"
 github: "https://github.com/ddydyd32"
 google_scholar: "https://scholar.google.com/citations?user=-2gKeu4AAAAJ&hl=en"
 # google_analystics_tracking_id: 'UA-12345678-1'

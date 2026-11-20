@@ -26,7 +26,6 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" }}>
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css" }}>
 
   <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -48,6 +47,7 @@
   <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href={{ "/libs/external/timeline.css" }}>
+  <link rel="stylesheet" href={{ "/libs/custom/my_css.css?v=3" }}>
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -73,7 +73,7 @@
         </div>
         <div class="nine columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
-            <p>{{ site.data.main_info.title }}</p>
+            <p class="header-text">{{ site.data.main_info.title | strip }}</p>
             <p>{{ site.data.main_info.email }}</p>
             <p>
 
@@ -99,10 +99,12 @@
         <ul class="navbar-list">
           <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#bio" }}>Bio</a></li> -->
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#research-interests" }}>Research Interests</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#awards" }}>Awards</a></li>
+          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#news" }}>News</a></li>
           <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#prospective-students" }}>Prospective Students</a></li> -->
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" }}>Publications</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" }}>Projects</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" }}>Vitae</a></li>
+          <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" }}>Publications</a></li> -->
+          <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" }}>Projects</a></li> -->
+          <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" }}>Vitae</a></li> -->
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#services" }}>Services</a></li>
           <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#teaching" }}>Teaching</a></li>
         </ul>
